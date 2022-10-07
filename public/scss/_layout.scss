@@ -1,0 +1,88 @@
+.nosotros{
+    @include flex(column, center, center);
+    text-align: center;
+    margin-top: 50px;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.productos{
+    @extend .nosotros;
+    h2{
+        flex-basis: 100%;
+    }
+}
+
+.calcula{
+    @extend .nosotros;
+}
+
+.contacto{
+    @extend .nosotros;
+}
+
+@media (min-width: 768px){
+    .productos{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px){
+    .burger-btn{
+        display: inline-block;
+        transition: all .4s ease;
+    }
+
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        background: $bgColor;
+        top: 100px;
+        left: 100vw;
+        text-align: center;
+        overflow: hidden;
+        width: 100%;
+        height: calc(100vh - 100px);
+        transition: all .4s ease;
+        z-index: -1;
+        gap: 50px;
+    }
+
+    .link{
+        font-size: 1.5em;
+    }
+
+    .active{
+        left: 0;
+    }
+
+    .rotate{
+        transform: rotate(90deg);
+    }
+
+    .hero{
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 1200px){
+    .card{
+        width: 20%;
+    }
+}

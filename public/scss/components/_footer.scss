@@ -1,0 +1,21 @@
+.footer{
+    @include flex(column, center, center);
+    gap: 20px;
+    padding: 20px;
+}
+
+.dato{
+    text-align: center;
+    margin: 20px 0;
+
+    p{
+        font-size: 1.5em;
+    }
+}
+
+.red{
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+}
+

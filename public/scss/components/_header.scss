@@ -1,0 +1,41 @@
+.logo{
+    width: 150px;
+    height: auto;
+}
+
+.header{
+    @include flex(row, space-between, center);
+    background-color: $bgColor;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: 100px;
+    max-width: 1200px;
+}
+
+.links{
+    list-style: none;
+    @include flex(row, center, center);
+    gap: 35px;
+}
+
+.link{
+    a{
+        color: $white;
+        font-size: 1.5em;
+        font-weight: 300;
+        text-transform: uppercase;
+        transition: all .6s ease;
+
+        &:hover{
+            color: $mainColor;
+            cursor: pointer;
+        }
+    }
+}
+
+.burger-btn{
+    width: 40px;
+    height: auto;
+    display: none;
+}

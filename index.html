@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUNT | Suplementación deportiva</title>
+    <link rel="stylesheet" href="public/css/main.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#"><img src="public/img/logotipo-bw.png" alt="" class="logo"></a>
+        <nav class="nav">
+            <ul id="links" class="links">
+                <li class="link"><a href="#nosotros">Nosotros</a></li>
+                <li class="link"><a href="#productos">Productos</a></li>
+                <li class="link"><a href="#calcula">Calculadora</a></li>
+                <li class="link"><a href="#contacto">Contacto</a></li>
+                <button id="cestaCarrito"><img src="public/img/cart.png" alt=""><span id="contadorCarrito">0</span></button>
+            </ul>
+            <img id="toggle" class="burger-btn" src="public/img/burger-btn.png" alt="">
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1 class="titulo">Transformá tu vida <br> con <span>RUNT</span></h1>
+        <p class="hero-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, pariatur quis fugit culpa excepturi optio.</p>
+        <button class="btn">¡Comencemos!</button>
+    </section>
+
+    <section class="nosotros" id="nosotros">
+        <h2 class="subtitulo">Nosotros</h2>
+        <p class="nosotros-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ab. Reiciendis, mollitia repudiandae voluptate doloribus repellat fugiat aliquam cum beatae totam consequatur voluptatem perferendis, ex adipisci quidem ducimus eos ratione?</p>
+    </section>
+
+    <div class="productos" id="containerProductos">
+        <h2 class="subtitulo">Productos destacados</h2>
+    </div>
+
+    <section class="calcula" id="calcula">
+        <h2 class="subtitulo">Calculá tu tasa metabólica basal</h2>
+        <form id="formCalcula" action="" class="form">
+            <label for="sexo">Sexo:</label>
+            <select name="sexo" id="sexo">
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+            </select>
+            <label for="peso" class="label">Peso:</label>
+            <input id="peso" type="text" class="input">
+            <label for="altura" class="label">Altura:</label>
+            <input id="altura" type="text" class="input">
+            <label for="edad" class="label">Edad:</label>
+            <input id="edad" type="text" class="input">
+            <input type="submit" class="btn sm">
+        </form>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <h2 class="subtitulo">Contactanos</h2>
+        <form action="" class="form">
+            <input type="text" class="input">
+            <input type="text" class="input">
+            <input type="text" class="input">
+            <input type="text" class="input">
+            <input type="submit" class="btn sm">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="datos">
+            <div class="dato">
+                <h4>Dirección</h4>
+                <p>República del Libano Este 821 - San Juan - Argentina</p>
+            </div>
+            <div class="dato">
+                <h4>Teléfono</h4>
+                <p>+54 (264) 5736450</p>
+            </div>
+        </div>
+        <img src="public/img/logotipo-bw.png" alt="" class="logo">
+        <div class="redes">
+            <a href="https://facebook.com" target="_blank"><img src="public/img/face.png" alt="" class="red"></a>
+            <a href="https://instagram.com" target="_blank"><img src="public/img/insta.png" alt="" class="red"></a>
+            <a href="https://whatsapp.com" target="_blank"><img src="public/img/whats.png" alt="" class="red"></a>
+        </div>
+    </footer>
+
+    <div id="containerModal" class="containerModal">
+        <div id="modalCarrito" class="modalCarrito">
+            <h3>Carrito</h3>
+            <button id="btnCerrarCarrito">X</button>
+            <div id="carritoContenedor" class="carritoContenedor">
+
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+        </div>
+    </div>
+
+    <script src="src/components/stock.js" type="module"></script>
+    <script src="src/components/navbar.js" type="module"></script>
+    <script src="src/components/carrito.js" type="module"></script>
+    <script src="src/components/modal.js" type="module"></script>
+    <script src="src/components/storage.js" type="module"></script>
+    <script src="src/components/form.js" type="module"></script>
+    <script src="App.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.card{
+    @include flex(column, center, center);
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+
+    img{
+        width: 80%;
+        height: auto;
+    }
+}
+
+.card-title{
+    font-size: $textMd;
+}
+
+.card-price{
+    span{
+        font-size: $textSm;
+    }
+}

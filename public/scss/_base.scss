@@ -1,0 +1,86 @@
+//fonts
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//variables
+$bgColor: #151515;
+$mainColor: #df7700;
+$white: #F6F8F8;
+$black: #1d1d1d;
+// $mainFont: 'Raleway', sans-serif;
+$mainFont: 'Inter Tight', sans-serif;
+$thin: 100;
+$extraLight: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$extraBlack: 900;
+$textXs: 1em;
+$textSm: 2em;
+$textMd: 3em;
+$textLg: 4em;
+$textXl: 5em;
+
+//mixins
+@mixin texto($font-size, $font-weight, $color){
+	//@include texto(2rem, 300, black);
+	font-family: $mainFont;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	color: $color;
+}
+
+@mixin flex($direction, $justify, $align){
+	//@include flex(row, center, end);
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+//reset
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: $mainFont;
+	text-decoration: none;
+}
+
+//commons
+
+html{
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: $bgColor;
+	@include flex(column, center, center);
+}
+
+h1{
+	@include texto($textXl, $extraBlack, $mainColor);
+}
+
+h2{
+	@include texto($textLg, $extraBold, $white);
+	text-transform: uppercase;
+}
+
+h3{
+	@include texto($textSm, $bold, $white);
+}
+
+h4{
+	@include texto($textSm, $bold, $white);
+}
+
+p{
+	@include texto($textSm, $regular, $white)
+}
+
