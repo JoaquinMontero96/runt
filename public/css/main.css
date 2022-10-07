@@ -163,7 +163,7 @@ p {
     border-radius: 50px;
     padding: 10px;
     border: none;
-    margin: 5px 0;
+    margin: 15px 0 30px 0;
     text-align: center;
     font-weight: 600;
     font-size: 3em; }
@@ -174,6 +174,13 @@ p {
 .label {
   color: #F6F8F8;
   font-size: 3em; }
+
+.tmb {
+  font-size: 3em;
+  font-weight: 700; }
+  .tmb span {
+    color: #df7700;
+    font-weight: #1d1d1d; }
 
 .footer {
   display: flex;
@@ -219,10 +226,69 @@ p {
 #btnCerrarCarrito {
   position: absolute;
   top: 10px;
-  right: 10px; }
+  right: 10px;
+  border-radius: 10px;
+  padding: 2px 5px;
+  border: none;
+  background-color: #df7700;
+  color: #F6F8F8;
+  cursor: pointer; }
 
 .show {
   display: flex; }
+
+.productoDato {
+  font-size: 1.5em; }
+
+.productoEnCarrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #df7700;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0; }
+
+.btnEliminar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 5px;
+  border: none;
+  background-color: #df7700;
+  color: #F6F8F8;
+  cursor: pointer; }
+
+#cestaCarrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all .4s ease; }
+  #cestaCarrito:hover {
+    cursor: pointer;
+    background-color: #df7700; }
+
+#imgCart {
+  width: 25px;
+  height: auto; }
+
+#contadorCarrito {
+  color: #F6F8F8;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-transform: uppercase; }
 
 .nosotros, .productos, .calcula, .contacto {
   display: flex;

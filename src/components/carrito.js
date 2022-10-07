@@ -22,7 +22,7 @@ const validarProductoRepetido = (productoId) => {
     if(productoRepetido) {
         productoRepetido.cantidad++;
         const cantidadProducto = document.getElementById(`cantidad${productoRepetido.id}`);
-        cantidadProducto.innerText = `cantidad: ${productoRepetido.cantidad}`;
+        cantidadProducto.innerText = `Cantidad: ${productoRepetido.cantidad}`;
         actualizarTotalesCarrito(carrito);
     } else {
         agregarAlCarrito(productoId);
@@ -37,9 +37,9 @@ const agregarAlCarrito = (productoId) => {
     const div = document.createElement('div');
     div.classList.add('productoEnCarrito');
     div.innerHTML = `
-    <p>${producto.nombre}</p>
-    <p>Precio: ${producto.precio}</p>
-    <p id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
+    <p class='productoDato'>${producto.nombre}</p>
+    <p class='productoDato'>Precio: $${producto.precio}</p>
+    <p class='productoDato' id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
     <button id=eliminar${producto.id} value='${producto.id}' class='btnEliminar'>X</button>
     `
 
@@ -71,9 +71,9 @@ const pintarCarrito = (carrito) => {
         const div = document.createElement('div');
         div.classList.add('productoEnCarrito');
         div.innerHTML = `
-        <p>${producto.nombre}</p>
-        <p>Precio: ${producto.precio}</p>
-        <p id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
+        <p class='productoDato'>${producto.nombre}</p>
+        <p class='productoDato'>Precio: $${producto.precio}</p>
+        <p class='productoDato' id=cantidad${producto.id}>Cantidad: ${producto.cantidad}</p>
         <button id=eliminar${producto.id} value='${producto.id}' class='btnEliminar'>X</button>
         `
         carritoContenedor.appendChild(div);

@@ -23,8 +23,39 @@
     position: absolute;
     top: 10px;
     right: 10px;
+    border-radius: 10px;
+    padding: 2px 5px;
+    border: none;
+    background-color: $mainColor;
+    color: $white;
+    cursor: pointer;
 }
 
 .show{
     display: flex;
+}
+
+.productoDato{
+    font-size: 1.5em;
+}
+
+.productoEnCarrito{
+    @include flex(row, space-between, center);
+    border: 2px solid $mainColor;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.btnEliminar{
+    @include flex(row, center, center);
+    font-size: 3em;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    background-color: $mainColor;
+    color: $white;
+    cursor: pointer;
 }

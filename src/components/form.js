@@ -8,11 +8,8 @@ formularioCalcula.onsubmit = (e) => {
     e.preventDefault();
 
     const tmb = Math.round(calcularTmb(sexo.value, peso.value, altura.value, edad.value));
-    const tasa = document.createElement('p');
-    tasa.classList.add('tmb');
-    tasa.innerHTML = '';
-    tasa.innerHTML = `Tu tasa metabólica basal es ${tmb} kcal`;
-    formularioCalcula.appendChild(tasa);
+    const tasa = document.getElementById('tmb');
+    tasa.innerHTML = `Tu tasa metabólica basal es <span>${tmb}</span> kcal`;
 }
 
 const calcularTmb = (sexo, peso, altura, edad) => {

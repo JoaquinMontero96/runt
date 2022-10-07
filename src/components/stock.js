@@ -32,7 +32,7 @@ const productos = [
     {
         id: 4,
         nombre: 'BCAA 2:1:1',
-        desc: '90 comprimidos',
+        desc: '90 comprimidos<br><br>',
         marca: 'Ena',
         precio: 2099,
         cantidad: 1,

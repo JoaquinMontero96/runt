@@ -16,7 +16,7 @@
                 <li class="link"><a href="#productos">Productos</a></li>
                 <li class="link"><a href="#calcula">Calculadora</a></li>
                 <li class="link"><a href="#contacto">Contacto</a></li>
-                <button id="cestaCarrito"><img src="public/img/cart.png" alt=""><span id="contadorCarrito">0</span></button>
+                <button id="cestaCarrito"><img id="imgCart" src="public/img/cart.png" alt=""><span id="contadorCarrito">0</span></button>
             </ul>
             <img id="toggle" class="burger-btn" src="public/img/burger-btn.png" alt="">
         </nav>
@@ -40,8 +40,8 @@
     <section class="calcula" id="calcula">
         <h2 class="subtitulo">Calculá tu tasa metabólica basal</h2>
         <form id="formCalcula" action="" class="form">
-            <label for="sexo">Sexo:</label>
-            <select name="sexo" id="sexo">
+            <label for="sexo" class="label">Sexo:</label>
+            <select name="sexo" id="sexo" class="input">
                 <option value="M">Masculino</option>
                 <option value="F">Femenino</option>
             </select>
@@ -53,6 +53,7 @@
             <input id="edad" type="text" class="input">
             <input type="submit" class="btn sm">
         </form>
+            <p id="tmb" class="tmb"></p>
     </section>
 
     <section class="contacto" id="contacto">
