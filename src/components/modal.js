@@ -10,7 +10,12 @@ botonCerrarCarrito.addEventListener('click', () => {
 
 carroModal.addEventListener('click', (e) => {
     e.stopPropagation();
-    if(e.target.classList.contains('btnEliminar')){
-        eliminarProductoCarrito(e.target.value);
-    };
+
+    // if(e.target.classList.contains('btnEliminar')){
+    //     eliminarProductoCarrito(e.target.value);
+    // };
+
+    // Utilización del operador OR
+
+    e.target.classList.contains('btnEliminar') && eliminarProductoCarrito(e.target.value);
 })

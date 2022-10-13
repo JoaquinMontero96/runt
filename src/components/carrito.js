@@ -84,8 +84,24 @@ const eliminarProductoCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
     const carritoActualizado = carritoStorage.filter(producto => producto.id != productoId);
 
-    actualizarTotalesCarrito(carritoActualizado);
-    pintarCarrito(carritoActualizado);
+    Swal.fire({
+        icon: 'warning',
+        title: 'Eliminar producto',
+        text: '¿Desea eliminar el producto de su carrito?',
+        confirmButtonText: 'Eliminar',
+        cancelButtonText: 'Cancelar',
+        showCancelButton: true
+    }).then((result) => {
+        if(result.isConfirmed){
+            actualizarTotalesCarrito(carritoActualizado);
+            pintarCarrito(carritoActualizado);
+            Swal.fire({
+                title: 'Producto eliminado',
+                icon: 'success',
+                timer: 1500
+            })
+        }
+    });
 };
 
 export {validarProductoRepetido, agregarAlCarrito, pintarCarrito, actualizarTotalesCarrito, eliminarProductoCarrito}

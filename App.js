@@ -19,6 +19,13 @@ const mostrarProductos = (productos) => {
         const boton = document.getElementById(`boton${producto.id}`);
         boton.addEventListener('click', () => {
             validarProductoRepetido(producto.id);
+            Swal.fire({
+                icon: 'success',
+                title: '¡Perfecto!',
+                text: 'Producto agregado al carrito con éxito',
+                showConfirmButton: false,
+                timer: 1500
+            })
         })
     });
 };

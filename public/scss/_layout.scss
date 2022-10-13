@@ -23,6 +23,12 @@
     @extend .nosotros;
 }
 
+#btnComprar{
+    @extend .btn;
+    font-size: $textSm;
+    width: 100%;
+}
+
 @media (min-width: 768px){
     .productos{
         flex-direction: row;

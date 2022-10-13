@@ -12,11 +12,15 @@
 .modalCarrito{
     width: 500px;
     height: auto;
+    min-height: 60vh;
     background-color: $bgColor;
     border-radius: 10px;
     border: 2px solid $mainColor;
     padding: 20px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #btnCerrarCarrito{
@@ -58,4 +62,14 @@
     background-color: $mainColor;
     color: $white;
     cursor: pointer;
+}
+
+.precioProducto{
+    text-align: end;
+}
+
+#precioTotal{
+    color: $mainColor;
+    font-weight: $bold;
+    font-size: 2.5rem;
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RUNT | Suplementación deportiva</title>
     <link rel="stylesheet" href="public/css/main.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header class="header">
@@ -93,7 +94,10 @@
             <div id="carritoContenedor" class="carritoContenedor">
 
             </div>
-            <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+            <div>
+                <p class="precioProducto">Precio total: $ <span id="precioTotal"></span></p>
+                <button id="btnComprar">Finalizar compra</button>
+            </div>
         </div>
     </div>
 
