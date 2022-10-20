@@ -1,7 +1,10 @@
 import { validarProductoRepetido } from "./src/components/carrito.js";
+import { obtenerProductos } from "./src/obtenerProductos.js";
 
-const mostrarProductos = (productos) => {
+const mostrarProductos = async () => {
     const containerProductos = document.getElementById('containerProductos');
+
+    const productos = await obtenerProductos();
 
     productos.forEach(producto => {
         const div = document.createElement('div');

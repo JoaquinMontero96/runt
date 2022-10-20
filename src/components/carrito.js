@@ -1,4 +1,4 @@
-import {productos} from './stock.js'
+import { obtenerProductos } from '../obtenerProductos.js';
 import { guardarCarritoStorage, obtenerCarritoStorage } from './storage.js';
 
 let carrito = [];
@@ -29,8 +29,9 @@ const validarProductoRepetido = (productoId) => {
     }
 };
 
-const agregarAlCarrito = (productoId) => {
+const agregarAlCarrito = async (productoId) => {
     const carritoContenedor = document.getElementById('carritoContenedor');
+    const productos = await obtenerProductos();
     const producto = productos.find(producto => producto.id === productoId);
     carrito.push(producto);
 
