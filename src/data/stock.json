@@ -2,7 +2,7 @@
     {
         "id": 1,
         "nombre": "Proteína 1kg",
-        "desc": "Lorem ipsum dolor sit amet consectetur.",
+        "desc": "Frutilla | Chocolate | Vainilla | Banana",
         "marca": "Ena",
         "precio": 5499,
         "cantidad": 1,
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "nombre": "Creatina",
-        "desc": "Lorem ipsum dolor sit amet consectetur.",
+        "desc": "Sachet x 300 grs.",
         "marca": "Ena",
         "precio": 3199,
         "cantidad": 1,
@@ -22,7 +22,7 @@
     {
         "id": 3,
         "nombre": "Cereal bar",
-        "desc": "Lorem ipsum dolor sit amet consectetur.",
+        "desc": "Chocolate | Frutilla | Vainilla.",
         "marca": "Ena",
         "precio": 299,
         "cantidad": 1,
